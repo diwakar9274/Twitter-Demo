@@ -17,6 +17,30 @@
     <% if flash[:alert] %>
       <p class="notification is-primary global-notification"><%= alert %></p>
     <% end %>
+    <nav class="navbar is-info">
+      <div class="navbar-brand">
+        <%= link_to root_path,class:'navbar-item' do %>
+          <h1>Twitter</h1>
+        <% end %>
+        <div class="navbar-burger burger" data-target="navbarExample">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="navbarExample" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="field is-grouped">
+            <p class="control">
+              <%= link_to 'New Tweet',new_tweeet_path,class:'button is-info is-inverted' %>
+            </p>
+            <p class="control">
+              SignUp
+            </p>
+          </div>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
